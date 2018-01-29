@@ -1,0 +1,128 @@
+<br>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-6 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <form name="classForm" class="form-horizontal" role="form">
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="school">School</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+										<select class="form-control" name="school" ng-model="selecT.school" ng-options="school.school_id as school.school_name for school in schools"></select>
+										<span ng-show="classForm.school.$error.required" class="help-inline">School is required</span> 
+									</span>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="term">Term</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+										<select class="form-control" name="term" ng-model="selecT.term" ng-options="term.term_id as term.term_name for term in terms"></select>
+										<span ng-show="classForm.term.$error.required" class="help-inline">Term is required</span> 
+									</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="classLevel">Class Level</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+								<select class="form-control" name="classLevel" ng-model="selecT.classLevel" ng-options="classLevel.cls_lvl_id as classLevel.level for classLevel in classLevels"></select>
+								<span ng-show="classForm.classLevel.$error.required" class="help-inline">Class Level is required</span> 
+                            </span>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="course">Course</label>
+                                <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+									<select class="form-control" name="course"  ng-model="selecT.course" ng-options="course.course_id as course.course_name for course in courses"></select>
+									<span ng-show="classForm.course.$error.required" class="help-inline">Course is required</span> 
+								</span>
+                                </div> 
+                            </div> 
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="major">Major</label>
+                                <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+									<select class="form-control" name="major"  ng-model="selecT.major" ng-options="major.major_id as major.major_name for major in majors"></select>
+									<span ng-show="classForm.major.$error.required" class="help-inline">Major is required</span> 
+								</span>
+                                </div> 
+                            </div>
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="section">Section</label>
+                                <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+									<select class="form-control" name="section" ng-model="selecT.section" ng-options="section.section_id as section.section_name for section in sections"></select>
+									<span ng-show="classForm.section.$error.required" class="help-inline">Section is required</span> 
+								</span>
+                                </div> 
+                            </div>
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="capacity">Capacity</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="number" min="0" max="100" class="form-control" placeholder="Capacity" name="capacity" ng-model="selecT.capacity"/>  
+                            <span ng-show="classForm.capacity.$error.required" class="help-inline">Capacity is required</span>
+							</span>
+                                </div>
+                            </div>
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="instructor">Instructor</label>
+                                <div class="col-sm-7">
+                                <span class="block input-icon input-icon-right">
+									<select class="form-control" name="instructor" ng-model="selecT.instructor" ng-options="instructor.instructor_id as instructor.fname+' '+instructor.lname for instructor in instructors"></select>
+									<span ng-show="classForm.section.$error.required" class="help-inline">Instructor is required</span> 
+								</span>
+                                </div> 
+                            </div>
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="waitlist">Max. Wait List</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="number" min="0" max="15" class="form-control" placeholder="Waitlist" name="waitlist" ng-model="selecT.waitlist"/>  
+                            <span ng-show="classForm.capacity.$error.required" class="help-inline">Wait List is required</span>
+							</span>
+                                </div>
+                            </div>
+							
+							
+							
+                     <!--       <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="phone">Phone</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" placeholder="Phone" name="phone" ng-model="signup.phone"/>
+                            </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="address">Address</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                <input type="text" class="form-control" placeholder="Address" ng-model="signup.address" />
+                            </span>
+                                </div>
+                            </div> -->
+                            <div class="form-group">
+                                <span class="lbl col-sm-5"> </span>
+                                <div class="col-sm-7">
+                                    <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="Add(selecT)" ">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->

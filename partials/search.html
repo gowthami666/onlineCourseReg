@@ -1,0 +1,56 @@
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-14">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                           Class Search
+                        </h4>
+                        <br/>
+                        <form name="simpleSearchForm" class="form-horizontal" role="form">
+							<div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="classId">class Number</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="class Number" name="classId" ng-model="search.classId" focus/>
+                                        <span ng-show="simpleSearchForm.classId.$error.required" class="help-inline">Class Number is required</span>
+										<span ng-show="simpleSearchForm.classId.$error.number" class="help-inline">Number only</span> 										
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span class="lbl col-sm-5"></span>
+                                <div class="col-sm-7">
+                                    <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="doSearch(search)" data-ng-disabled="simpleSearchForm.$invalid">
+                                        Search
+                                    </button>
+                                </div>
+								<span class="lbl col-sm-5"></span>
+								<div class="col-sm-7"><a href="#/advSearch">Advanced Search</a></div>
+								<span class="lbl col-sm-5"></span>
+								<div class="col-sm-7"><a href="#/select">Select</a></div>
+                            </div>
+							
+                            </fieldset>
+                        </form>
+						<div class="searchResults" >
+							<div ui-grid="searchTable" ui-grid-pagination ui-grid-selection class="grid"></div>
+							<button type="submit" class= "btn-primary" ng-click= "classSelect()"> 
+                                        select class
+                            </button>
+														 <button type="submit" class= "btn-primary" ng-click= "closeClass()"> 
+                                        close class
+                            </button> 
+							</div>
+							
+                    </div>
+                </div>
+            </div>
+
+        </div>
+		
+    </div>
+</div>
+<!-- /.page-content -->
